@@ -1,5 +1,8 @@
 const db = require("./db/connection");
 const apiRoutes = require("./routes/apiRoutes");
+const inquirer = require("inquirer");
+const cTable = require("console.table");
+const Game = require("./lib/Game");
 
 const express = require("express");
 const mysql = require("mysql2");
@@ -27,3 +30,5 @@ db.connect((err) => {
     console.log(`Server running on port ${PORT}`);
   });
 });
+
+new Game().initializeGame();
