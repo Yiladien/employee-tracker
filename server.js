@@ -1,5 +1,4 @@
 const db = require("./db/connection");
-const apiRoutes = require("./routes/apiRoutes");
 const initializeApp = require("./lib/start");
 
 const mysql = require("mysql2");
